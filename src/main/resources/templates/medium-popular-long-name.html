@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+<h1>Moderately popular Movies</h1>
+<div th:each="movie : ${movies}">
+    <img width="150px" th:src="@{'http://image.tmdb.org/t/p/original' + ${movie.posterPath}}" /> <br />
+    Title: <span th:text="${movie.title}"></span> <br />
+    Overview: <span th:text="${movie.overview}"></span> <br />
+</div>
+</body>
+</html>
